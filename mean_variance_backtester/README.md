@@ -8,11 +8,11 @@ This project implements a rolling-window mean-variance portfolio backtesting sys
 
 Fetch historical data for multiple stocks via yfinance
 
-Implement rolling-window Mean-Variance Optimization (maximize Sharpe ratio)
+Implement rolling-window Mean-Variance Optimization
 
 Support periodic rebalancing
 
-Comprehensive performance evaluation (annualized return, volatility, Sharpe ratio, maximum drawdown)
+Comprehensive performance evaluation including annualized return, volatility, Sharpe ratio, and maximum drawdown
 
 Visualization of net asset value curves and drawdowns
 
