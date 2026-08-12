@@ -20,12 +20,12 @@ Visualization of net asset value curves and drawdowns
 
 ### Drawdown Comparison
 
-![alt text](drawdown_comparison.png)
+![alt text](result/drawdown_comparison.png)
 The Buy & Hold and Equal Weight strategies exhibit highly comparable drawdown dynamics, reflecting similar risk profiles during the observed period. In contrast, the Markowitz portfolio demonstrates a more favorable drawdown trajectory, achieving a minimum drawdown rate of −0.2101, thereby indicating superior downside risk management relative to the benchmark strategies.
 
 ### Net Value Comparison
 
-![alt text](net_value_comparison.png)
+![alt text](result/net_value_comparison.png)
 The Markowitz strategy demonstrates a superior trajectory in net asset value growth relative to the benchmark strategies. Between January 2022 and May 2023, the Buy & Hold and Equal Weight portfolios exhibit highly similar performance patterns. However, subsequent to May 2023, the Buy & Hold strategy begins to outperform the Equal Weight approach, with the performance gap between the two strategies widening progressively over time.
 
 ## Limitation
