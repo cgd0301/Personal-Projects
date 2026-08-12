@@ -28,9 +28,12 @@ The Buy & Hold and Equal Weight strategies exhibit highly comparable drawdown dy
 ![alt text](results/net_value_comparison.png)
 The Markowitz strategy demonstrates a superior trajectory in net asset value growth relative to the benchmark strategies. Between January 2022 and May 2023, the Buy & Hold and Equal Weight portfolios exhibit highly similar performance patterns. However, subsequent to May 2023, the Buy & Hold strategy begins to outperform the Equal Weight approach, with the performance gap between the two strategies widening progressively over time.
 
+(During the initial 60-day period, the Markowitz strategy exhibits performance similar to the other two approaches because its backlook window is set to 60 days and the initial weight parameters are consistent with those of the other two groups. )
+
 ## Limitation
 
 The backtesting framework employed in this study does not incorporate transaction fees, which constitutes a methodological limitation. Consequently, the reported net asset values and returns are likely to be upwardly biased relative to real-world outcomes, as the omission of trading costs may overstate the attainable performance.
+For computational simplicity, the Sharpe ratio is calculated using a fixed risk-free rate of 0.02, which may introduce deviations from the actual values.
 
 ## Tech Stack
 
