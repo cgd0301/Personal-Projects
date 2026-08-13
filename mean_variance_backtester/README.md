@@ -30,12 +30,7 @@ Rebalances back to equal weights every 20 trading days.
 
 #### 3.Mean-Variance Optimization
 
-Lookback window: 60 trading days
-Rebalancing frequency: every 20 trading days
-Optimization objective: Maximize Sharpe ratio
-Constraints: weights sum to 1 and each weight is from 0 to 1 (long-only, no short-selling)
-Mean returns and covariance matrix are annualized using 252 trading days.
-Risk-free rate is fixed at 2% per year.
+The portfolio uses a 60‑day lookback window and is rebalanced every 20 trading days, with the objective of maximizing the Sharpe ratio. Weights are long‑only and must sum to 1, ensuring no short‑selling. Mean returns and the covariance matrix are annualized based on 252 trading days, and the risk‑free rate is fixed at 2% per year for Sharpe ratio calculations.
 
 ## Main Results
 
@@ -52,8 +47,11 @@ The Mean-Variance portfolio achieves a higher terminal net value compared with t
 ## Limitation
 
 Transaction costs and market impact are not included. Therefore, reported returns and net asset values are likely overstated relative to live trading.
+
 The risk-free rate is assumed constant at 2%.
+
 Covariance matrix is estimated using a simple rolling window without shrinkage or other robust techniques, which may lead to estimation error.
+
 The stock universe is small and consists of large-cap U.S. stocks, so results may not generalize to broader markets.
 
 ## Tech Stack
