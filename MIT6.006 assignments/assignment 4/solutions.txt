@@ -1,0 +1,14 @@
+Problem 4-1
+(a) 3
+(b) 4
+(c) 7
+(d) This way could work. However, theoretically, since each bunch of insertions will
+make the number of items equal to the size of hash table, the table has to be enlarged
+every time when there's new insertion, which increases the average time complexity in
+contrast with original method. Besides, the number of items close to size of hash table
+could increase the possiblity of collision, especially unacceptable for the open adressing 
+method. Lastly, doubling is a fast operation for computer.
+
+Problem 4-2
+(a) 1
+(b) 4

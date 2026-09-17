@@ -1,0 +1,39 @@
+(a) 1 Macroware, Inc.
+(b) 2 Pear, Inc.
+(c) 10 Dale, Inc.
+(d) 4
+(e) 1
+(f) 2
+(g) 3
+(h)
+    1. No
+    2. No
+    3. Yes
+    4. No
+    5. Yes
+    6. No
+(i) 10
+(j) 10
+(k) 1
+(l) 1
+(m) l
+(n) 5
+(o) 2
+(p) 5
+(q) 3
+(r) 1 Dale, Inc. 1 Macroware, Inc.
+(s) 3 Dale, Inc. 3 JCN Corp. , Macroware Inc. 2, Pear Inc. 1
+(t) STOCKLIMITED(total, count, start, end, limit) {
+    create table purchaseAmount
+    create table profit
+    for cash from 0 to total: {
+        profit[cash, 0] = total
+        purchaseAmount[cash, 0] = 0
+        for stock from 1 to count {
+            profit[cash, stock] = max{profit[cash - k * start[stock], stock - 1] + k * (end[stock] - start[stock])
+                                    for k from 0 to limit[stock] where cash - k * start[stock] >= 0}
+            purchaseAmount[cash, stock] = k which leads to the largest profit in the recurrence function
+        }
+    }
+    return profit[total, count]
+}

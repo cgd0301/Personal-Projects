@@ -1,0 +1,36 @@
+Pseudocode:
+def count_max_strength(G, k)
+    Set d[v] = Inf for every v in G except s
+    d[s] = 1
+    Set ans[v] = 0 for every v in G except S
+    ans[s] = 1
+    Set P[v] = NIL for every v in G
+    Set S to be an empty Set
+    Set Q to be a priority queue includes all vertex, 
+    ranged by d[v] in asc order
+
+    while the number of elements in S smaller or equal to k + 1:
+        extract the smallest element i in Q
+        for every vertex v connected to i:
+            relax(i, v, d)
+
+def relax(i, v, d):
+    if d[v] >= d[i] / ER(i, v):
+        d[v] = d[i] / ER(i, v)
+        ans[v] = ans[i] * ER(i, v)
+        P[v] = i
+
+
+Complexity analysis:
+Initialization of d[v], ans[v], P[v], Q costs O(V) time
+the while loop will cycle for k times
+In side the while loop, the extraction of smallest element in
+a priority queue is O(logV), and time cost for each for loop is
+constant, as the relax function has a constant time complexity.
+There will be at most E times of for loop.Therefore, for each while 
+loop, the time complexity is O(logV + E). Since there are k times of
+while loop, the general time complexity for the while loop is 
+O(klogV + kE). Finally, the complexity for the count_max_strength
+function is O(klogV + kE + V). Because logV is far smaller than E,
+we could ignore it. Therefore, the final time complexity 
+is O(kE + V).
